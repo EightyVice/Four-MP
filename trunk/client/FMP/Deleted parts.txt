@@ -1,0 +1,174 @@
+VirtualProtect((PVOID)(0xD43964+dwLoadOffset),2,PAGE_EXECUTE_READWRITE,&d);
+strcpy((PCHAR)0xD43964+dwLoadOffset,"popcycle_.dat");
+VirtualProtect((PVOID)(0xDE2D00+dwLoadOffset),2,PAGE_EXECUTE_READWRITE,&d);
+strcpy((PCHAR)0xDE2D00+dwLoadOffset,"platform:/textures/loadingscreensx");
+VirtualProtect((PVOID)(0xDE2D50+dwLoadOffset),2,PAGE_EXECUTE_READWRITE,&d);
+strcpy((PCHAR)0xDE2D50+dwLoadOffset,"platform:/textures/loadingscreensx");
+VirtualProtect((PVOID)(0x175B793+dwLoadOffset),2,PAGE_EXECUTE_READWRITE,&d);
+
+
+int __cdecl HOOK_getNativeAddress(unsigned int a1)
+{
+	Log::Info("GetNativeAddress: 0x%x , natives count: %d",a1,*(DWORD*)(0x18DF6EC+dwLoadOffset));
+
+	DWORD pointer1 = *(DWORD*)(0x18DF6E4+dwLoadOffset);
+	DWORD pointer2 = *(DWORD*)(0x18DF6E0+dwLoadOffset);
+	Log::Info("pointers: [0x%x]:(%d),[0x%x]:(%d)",pointer1,pointer1,pointer2,pointer2);
+
+	unsigned int v2;
+	unsigned int v3;
+	unsigned int v4;
+	unsigned int hash_pointer;
+
+	if(!pointer1) 
+	{
+		Log::Info("not find pointer");
+		return 0;
+	}
+	// reset data
+	v3 = a1 % pointer1;
+	v4 = a1;
+	// first pointer
+	hash_pointer = *(DWORD *)(pointer2 + 8 * v3);
+	while(hash_pointer != a1)
+	{
+		v4 = (v4 >> 1) + 1;
+		v3 = (v4 + v3) % pointer1;
+		hash_pointer = *(DWORD *)(pointer2 + 8 * v3);
+		Log::Info("hash_pointer: 0x%x [%d]",hash_pointer,hash_pointer);
+		if((hash_pointer == 0)) break;
+	}
+	if(hash_pointer == 0)
+	{
+		Log::Info("hash_pointer null");
+		return 0;
+	}
+	int addr = (int)(*(DWORD*)(pointer2 + 8 * v3 + 4));
+	Log::Info("addr = 0x%x",addr);
+	return addr;
+/*
+	v3 = a1 % pointer1;
+	v4 = a1;
+	hash_pointer = *(DWORD *)(pointer2 + 8 * v3);
+	if (v2 != a1)
+	{
+		Log::Info("v2 != a1");
+		do
+		{
+			v4 = (v4 >> 1) + 1;
+			v3 = (v4 + v3) % pointer1;
+			hash_pointer = *(DWORD *)(pointer2 + 8 * v3);
+			Log::Info("hash_pointer: 0x%x [%d]",hash_pointer,hash_pointer);
+		}
+		while((hash_pointer != a1) && (hash_pointer != 0));
+		if(hash_pointer == 0)
+		{
+			Log::Info("hash_pointer null");
+			return 0;
+		}
+	}
+	int addr = (int)(*(DWORD*)(pointer2 + 8 * v3 + 4));
+	Log::Info("addr = 0x%x",addr);
+	return addr;
+*/
+}
+
+/*
+char __stdcall registerNativeByHash(int a1, int a2)
+{
+  int v2; // ebx@1
+  unsigned int v3; // edi@1
+  unsigned int v5; // eax@5
+  unsigned int v6; // edx@5
+  unsigned int v7; // ecx@5
+  int v8; // ecx@8
+
+  v2 = a1;
+  if ( !pointer1 )
+  {
+    sub_6CF3F0();
+    v3 = pointer1;
+  }
+  if ( dword_18DF6EC == v3 )
+    return 0;
+  v6 = v2 % pointer1;
+  v7 = v2;
+  v5 = *(_DWORD *)(pointer2 + 8 * v2 % pointer1);
+  if ( v5 > 1 )
+  {
+    while ( v5 != v2 )
+    {
+      v7 = (v7 >> 1) + 1;
+      v6 = (v7 + v6) % pointer1;
+      v5 = *(_DWORD *)(pointer2 + 8 * v6);
+      if ( v5 <= 1 )
+        goto LABEL_8;
+    }
+    return 0;
+  }
+LABEL_8:
+  v8 = a2;
+  *(_DWORD *)(pointer2 + 8 * v6) = v2;
+  *(_DWORD *)(pointer2 + 8 * v6 + 4) = v8;
+  ++dword_18DF6EC;
+  return 1;
+}
+*/
+
+/*
+char __stdcall registerNativeByHash(int a1, int a2)
+{
+  int v2; // ebx@1
+  unsigned int v3; // edi@1
+  unsigned int v5; // eax@5
+  unsigned int v6; // edx@5
+  unsigned int v7; // ecx@5
+  int v8; // ecx@8
+
+  v2 = a1;
+  v3 = dword_18DF6E4;
+  if ( !dword_18DF6E4 )
+  {
+    sub_6CF3F0();
+    v3 = dword_18DF6E4;
+  }
+  if ( dword_18DF6EC == v3 )
+    return 0;
+  v6 = v2 % v3;
+  v7 = v2;
+  v5 = *(_DWORD *)(dword_18DF6E0 + 8 * v2 % v3);
+  if ( v5 > 1 )
+  {
+    while ( v5 != v2 )
+    {
+      v7 = (v7 >> 1) + 1;
+      v6 = (v7 + v6) % v3;
+      v5 = *(_DWORD *)(dword_18DF6E0 + 8 * v6);
+      if ( v5 <= 1 )
+        goto LABEL_8;
+    }
+    return 0;
+  }
+LABEL_8:
+  v8 = a2;
+  *(_DWORD *)(dword_18DF6E0 + 8 * v6) = v2;
+  *(_DWORD *)(dword_18DF6E0 + 8 * v6 + 4) = v8;
+  ++dword_18DF6EC;
+  return 1;
+}
+*/
+
+	//POINTER_TO_MEMBER(pointer_getNativeAddressByHash,(0x6CF460+dwLoadOffset),FakeMethod_int);
+//	DetourFunc((BYTE*)(0x6CF460+dwLoadOffset),(BYTE*)HOOK_getNativeAddress,5);
+/*
+	if (Unlock((LPVOID)(0x6CF460+dwLoadOffset), 4))
+	{
+		*(DWORD *)(0x6CF460+dwLoadOffset) = (DWORD)HOOK_getNativeAddress;
+	}
+*/
+
+class FakeClass {};
+
+typedef void (FakeClass::* FakeMethod_int)(int);
+
+//FakeMethod_int pointer_getNativeAddressByHash = 0;

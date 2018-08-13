@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/234/trunk/server/Server/Plugin_sample
+END
+PluginCore.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/209/trunk/server/Server/Plugin_sample/PluginCore.cpp
+END
+PluginConfig.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/209/trunk/server/Server/Plugin_sample/PluginConfig.h
+END
+Plugin_sample.sln
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/124/trunk/server/Server/Plugin_sample/Plugin_sample.sln
+END
+PluginCore.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/209/trunk/server/Server/Plugin_sample/PluginCore.h
+END
+Plugin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/209/trunk/server/Server/Plugin_sample/Plugin.cpp
+END
+Plugin_sample.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/234/trunk/server/Server/Plugin_sample/Plugin_sample.vcproj
+END
+Plugin.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/124/trunk/server/Server/Plugin_sample/Plugin.h
+END

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/284/trunk/Shared/logging
+END
+logFile.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/284/trunk/Shared/logging/logFile.cpp
+END
+logStd.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/284/trunk/Shared/logging/logStd.h
+END
+log.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/284/trunk/Shared/logging/log.cpp
+END
+log.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/284/trunk/Shared/logging/log.h
+END
+logFile.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/284/trunk/Shared/logging/logFile.h
+END
+logStd.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/284/trunk/Shared/logging/logStd.cpp
+END

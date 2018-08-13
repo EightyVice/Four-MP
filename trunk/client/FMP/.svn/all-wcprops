@@ -1,0 +1,173 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/!svn/ver/312/trunk/client/FMP
+END
+ConsoleWindow.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/284/trunk/client/FMP/ConsoleWindow.h
+END
+Project.txt
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/124/trunk/client/FMP/Project.txt
+END
+xlive.def
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/124/trunk/client/FMP/xlive.def
+END
+FMP.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/287/trunk/client/FMP/FMP.vcproj
+END
+con_debugcommands.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/254/trunk/client/FMP/con_debugcommands.cpp
+END
+functions.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/284/trunk/client/FMP/functions.cpp
+END
+natives.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/124/trunk/client/FMP/natives.cpp
+END
+natives_list.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/124/trunk/client/FMP/natives_list.h
+END
+Game structures.txt
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/124/trunk/client/FMP/Game%20structures.txt
+END
+VehicleManager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/251/trunk/client/FMP/VehicleManager.cpp
+END
+ChatManager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/284/trunk/client/FMP/ChatManager.cpp
+END
+PlayersSync.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/284/trunk/client/FMP/PlayersSync.cpp
+END
+con_debugcommands.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/254/trunk/client/FMP/con_debugcommands.h
+END
+functions.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/269/trunk/client/FMP/functions.h
+END
+Deleted parts.txt
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/183/trunk/client/FMP/Deleted%20parts.txt
+END
+natives.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/124/trunk/client/FMP/natives.h
+END
+VehicleManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/269/trunk/client/FMP/VehicleManager.h
+END
+ChatManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/251/trunk/client/FMP/ChatManager.h
+END
+MySync.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/284/trunk/client/FMP/MySync.cpp
+END
+masterserver.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/287/trunk/client/FMP/masterserver.cpp
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/284/trunk/client/FMP/main.cpp
+END
+xlive.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/284/trunk/client/FMP/xlive.cpp
+END
+masterserver.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/229/trunk/client/FMP/masterserver.h
+END
+PlayerManager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/251/trunk/client/FMP/PlayerManager.cpp
+END
+ConsoleWindow.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/212/trunk/client/FMP/ConsoleWindow.cpp
+END
+PlayerManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/263/trunk/client/FMP/PlayerManager.h
+END
+FMP.sln
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/175/trunk/client/FMP/FMP.sln
+END
+enums.h
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/124/trunk/client/FMP/enums.h
+END

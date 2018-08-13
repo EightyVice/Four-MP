@@ -1,0 +1,1350 @@
+sysArray:
+00000000 sysArray        struc ; (sizeof=0x8)
+00000000 pData           dd ?
+00000004 wCount          dw ?
+00000006 wSize           dw ?
+00000008 sysArray        ends
+
+-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+scrThreadContext:
+00000000 scrThreadContext struc ; (sizeof=0x54)
+00000000 nThreadId       dd ?
+00000004 dwScriptHash    dd ?
+00000008 eThreadState    dd ?
+0000000C dwOpcodeOff     dd ?
+00000010 field_10        dd ?                    ; current stack frame offset ?
+00000014 nStackOff       dd ?
+00000018 nTimerA         dd ?
+0000001C nTimerB         dd ?
+00000020 nTimerC         dd ?
+00000024 fWaitTime       dd ?
+00000028 field_28        dd ?
+0000002C field_2C        dd ?
+00000030 field_30        dd ?
+00000034 field_34        dd ?
+00000038 field_38        dd ?
+0000003C field_3C        dd ?
+00000040 field_40        dd ?
+00000044 field_44        dd ?
+00000048 field_48        dd ?
+0000004C field_4C        dd ?
+00000050 field_50        dd ?
+00000054 scrThreadContext ends
+
+-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+scrThread:
+00000000 scrThread       struc ; (sizeof=0x70)
+00000000 __vmt           dd ?
+00000004 m_context       scrThreadContext ?
+00000058 m_pScriptStack  dd ?
+0000005C field_5C        dd ?
+00000060 m_protectedStorage dd ?
+00000064 field_64        dd ?
+00000068 field_68        dd ?
+0000006C m_pszExitMessage dd ?
+00000070 scrThread       ends
+
+-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+GtaThread:
+00000000 GtaThread       struc ; (sizeof=0xB0)
+00000000 __parent        scrThread ?
+00000070 field_70        db ?
+00000071                 db ? ; undefined
+00000072                 db ? ; undefined
+00000073                 db ? ; undefined
+00000074 field_74        dd ?
+00000078 field_78        dd ?
+0000007C field_7C        dd ?
+00000080 field_80        dd ?
+00000084 field_84        db ?
+00000085 field_85        db ?
+00000086 field_86        db ?
+00000087 field_87        db ?
+00000088 field_88        dd ?
+0000008C field_8C        dd ?
+00000090 m_nSavedDeatharrestStackOff dd ?
+00000094 field_94        db ?
+00000095 m_bScriptSafeForNetworkGame db ?
+00000096 m_bThisScriptShouldBeSaved db ?
+00000097 m_bPlayerControlOnInMissionCleanup db ?
+00000098 m_bClearHelpInMissionCleanup db ?
+00000099 m_bMinigameScript db ?
+0000009A m_bAllowNonMinigameTextMessages db ?
+0000009B m_bAllowOneTimeOnlyCommandToRun db ?
+0000009C m_bPaused       db ?
+0000009D m_bCanBePaused  db ?
+0000009E field_9E        db ?                    ; handle type (_fA0) 0: ped, 1: object, 2: world point
+0000009F field_9F        db ?
+000000A0 field_A0        dd ?                    ; HANDLE
+000000A4 m_bCanRemoveBlipsCreatedByAnyScript db ?
+000000A5                 db ? ; undefined
+000000A6                 db ? ; undefined
+000000A7                 db ? ; undefined
+000000A8 field_A8        dd ?
+000000AC field_AC        dd ?
+000000B0 GtaThread       ends
+
+-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+CPlayer:
+00000000 CPlayer         struc ; (sizeof=0x5A0)
+00000000 field_0         CPlayer_obj1 ?
+00000060 field_60        db 1000 dup(?)
+00000448 field_448       db 56 dup(?)
+00000480 m_dwLastHitCarTime dd ?
+00000484 m_dwLastHitPedTime dd ?
+00000488 m_dwLastHitBuildingTime dd ?
+0000048C m_dwLastHitObjectTime dd ?
+00000490 m_dwLastDrovePavementTime dd ?
+00000494 m_dwLastRanLightTime dd ?
+00000498 m_dwLastDroveAgainstTrafficTime dd ?
+0000049C                 db ? ; undefined
+0000049D                 db ? ; undefined
+0000049E                 db ? ; undefined
+0000049F                 db ? ; undefined
+000004A0                 db ? ; undefined
+000004A1                 db ? ; undefined
+000004A2                 db ? ; undefined
+000004A3                 db ? ; undefined
+000004A4                 db ? ; undefined
+000004A5                 db ? ; undefined
+000004A6                 db ? ; undefined
+000004A7                 db ? ; undefined
+000004A8                 db ? ; undefined
+000004A9                 db ? ; undefined
+000004AA                 db ? ; undefined
+000004AB                 db ? ; undefined
+000004AC field_4AC       dd ?
+000004B0                 db ? ; undefined
+000004B1                 db ? ; undefined
+000004B2                 db ? ; undefined
+000004B3                 db ? ; undefined
+000004B4 m_nTimeOfDeath  dd ?
+000004B8                 db ? ; undefined
+000004B9                 db ? ; undefined
+000004BA                 db ? ; undefined
+000004BB                 db ? ; undefined
+000004BC m_fForcedDragMult dd ?
+000004C0                 db ? ; undefined
+000004C1                 db ? ; undefined
+000004C2                 db ? ; undefined
+000004C3                 db ? ; undefined
+000004C4                 db ? ; undefined
+000004C5                 db ? ; undefined
+000004C6                 db ? ; undefined
+000004C7                 db ? ; undefined
+000004C8                 db ? ; undefined
+000004C9                 db ? ; undefined
+000004CA m_nbPlayerNum   db ?
+000004CB field_4CB       db ?
+000004CC field_4CC       dd ?                    ; player state? (3 - isDead)
+000004D0 field_4D0       db 102 dup(?)
+00000536 m_bNeverrTired  db ?
+00000537 m_bFastReload   db ?
+00000538 m_bFireProof    db ?
+00000539                 db ? ; undefined
+0000053A m_wMaxHealth    dw ?
+0000053C m_wMaxArmor     dw ?
+0000053E                 db ? ; undefined
+0000053F m_bFreeHealthCare db ?
+00000540 m_bCanDriveBy   db ?
+00000541 m_bCanBeHassledByGangs db ?
+00000542                 db ? ; undefined
+00000543                 db ? ; undefined
+00000544 field_544       dd ?                    ; bits: 0 - can use cover, 2 - damaged at least one ped, 3 - damaged at least one vehicle
+00000548                 db ? ; undefined
+00000549                 db ? ; undefined
+0000054A                 db ? ; undefined
+0000054B                 db ? ; undefined
+0000054C m_nPlayerMood   dd ?
+00000550                 db ? ; undefined
+00000551                 db ? ; undefined
+00000552                 db ? ; undefined
+00000553                 db ? ; undefined
+00000554                 db ? ; undefined
+00000555                 db ? ; undefined
+00000556                 db ? ; undefined
+00000557                 db ? ; undefined
+00000558                 db ? ; undefined
+00000559                 db ? ; undefined
+0000055A                 db ? ; undefined
+0000055B                 db ? ; undefined
+0000055C field_55C       dd ?
+00000560 m_dwPlayerColor dd ?
+00000564 m_nPlayerTeam   dd ?
+00000568 field_568       dd ?
+0000056C m_bDiedRecently db ?
+0000056D field_56D       db 3 dup(?)
+00000570 field_570       dd ?
+00000574 field_574       dd ?
+00000578 m_pPed          dd ? ; CHAR
+0000057C field_57C       dd ?
+00000580 m_pOlyOnterThisVehicle dd ?
+00000584 field_584       dd ?
+00000588 field_588       dd ?
+0000058C field_58C       dd ?
+00000590 field_590       dd ?
+00000594 field_594       dd ?
+00000598 field_598       dd ?
+0000059C field_59C       dd ?
+000005A0 CPlayer         ends
+
+-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+CPed:
+00000000 CPed            struc ; (sizeof=0xE4C)
+00000000 __parent        CPhysical ?
+00000210 field_210       db ?
+00000211 field_211       db ?
+00000212 field_212       db ?
+00000213 field_213       db ?
+00000214 field_214       dd ?                    ; float
+00000218 field_218       db ?
+00000219 field_219       db ?
+0000021A                 db ? ; undefined
+0000021B                 db ? ; undefined
+0000021C m_pPedBase      dd ?
+00000220 field_220       db ?
+00000221                 db ? ; undefined
+00000222                 db ? ; undefined
+00000223                 db ? ; undefined
+00000224 m_pIntelligence dd ?
+00000228 field_228       dd ?
+0000022C field_22C       dd ?
+00000230 field_230       dd ?
+00000234 field_234       CPed_obj1 ?
+0000025C field_25C       CPed_obj3 ?
+00000268 field_268       CPed_obj4 ?
+00000278 field_278       CPed_obj4 ?
+00000288                 db ? ; undefined
+00000289                 db ? ; undefined
+0000028A                 db ? ; undefined
+0000028B                 db ? ; undefined
+0000028C                 db ? ; undefined
+0000028D                 db ? ; undefined
+0000028E                 db ? ; undefined
+0000028F                 db ? ; undefined
+00000290                 db ? ; undefined
+00000291                 db ? ; undefined
+00000292                 db ? ; undefined
+00000293                 db ? ; undefined
+00000294                 db ? ; undefined
+00000295                 db ? ; undefined
+00000296                 db ? ; undefined
+00000297                 db ? ; undefined
+00000298                 db ? ; undefined
+00000299                 db ? ; undefined
+0000029A                 db ? ; undefined
+0000029B                 db ? ; undefined
+0000029C                 db ? ; undefined
+0000029D                 db ? ; undefined
+0000029E field_29E       db ?
+0000029F                 db ? ; undefined
+000002A0 m_weapons       CPedWeapons ?
+000003B0 m_audio         audPedAudioEntity ?
+00000560 m_speech        audSpeechAudioEntity ?
+00000708 field_708       db 104 dup(?)
+00000770 m_audioTracker  audPlaceableTracker ?
+0000077C field_77C       dd ?
+00000780 field_780       dd ?
+00000784 field_784       db ?
+00000785                 db ? ; undefined
+00000786                 db ? ; undefined
+00000787                 db ? ; undefined
+00000788 field_788       dd ?
+0000078C field_78C       dw ?
+0000078E                 db ? ; undefined
+0000078F                 db ? ; undefined
+00000790 field_790       dd ?
+00000794 field_794       dd ?
+00000798 field_798       dd ?
+0000079C field_79C       dd ?
+000007A0 field_7A0       dd ?
+000007A4 field_7A4       dd ?
+000007A8 field_7A8       dd ?
+000007AC                 db ? ; undefined
+000007AD                 db ? ; undefined
+000007AE                 db ? ; undefined
+000007AF                 db ? ; undefined
+000007B0                 db ? ; undefined
+000007B1                 db ? ; undefined
+000007B2                 db ? ; undefined
+000007B3                 db ? ; undefined
+000007B4                 db ? ; undefined
+000007B5                 db ? ; undefined
+000007B6                 db ? ; undefined
+000007B7                 db ? ; undefined
+000007B8                 db ? ; undefined
+000007B9                 db ? ; undefined
+000007BA                 db ? ; undefined
+000007BB                 db ? ; undefined
+000007BC                 db ? ; undefined
+000007BD                 db ? ; undefined
+000007BE                 db ? ; undefined
+000007BF                 db ? ; undefined
+000007C0                 db ? ; undefined
+000007C1                 db ? ; undefined
+000007C2                 db ? ; undefined
+000007C3                 db ? ; undefined
+000007C4                 db ? ; undefined
+000007C5                 db ? ; undefined
+000007C6                 db ? ; undefined
+000007C7                 db ? ; undefined
+000007C8                 db ? ; undefined
+000007C9                 db ? ; undefined
+000007CA                 db ? ; undefined
+000007CB                 db ? ; undefined
+000007CC                 db ? ; undefined
+000007CD                 db ? ; undefined
+000007CE                 db ? ; undefined
+000007CF                 db ? ; undefined
+000007D0                 db ? ; undefined
+000007D1                 db ? ; undefined
+000007D2                 db ? ; undefined
+000007D3                 db ? ; undefined
+000007D4                 db ? ; undefined
+000007D5                 db ? ; undefined
+000007D6                 db ? ; undefined
+000007D7                 db ? ; undefined
+000007D8                 db ? ; undefined
+000007D9                 db ? ; undefined
+000007DA                 db ? ; undefined
+000007DB                 db ? ; undefined
+000007DC                 db ? ; undefined
+000007DD                 db ? ; undefined
+000007DE                 db ? ; undefined
+000007DF                 db ? ; undefined
+000007E0                 db ? ; undefined
+000007E1                 db ? ; undefined
+000007E2                 db ? ; undefined
+000007E3                 db ? ; undefined
+000007E4                 db ? ; undefined
+000007E5                 db ? ; undefined
+000007E6                 db ? ; undefined
+000007E7                 db ? ; undefined
+000007E8                 db ? ; undefined
+000007E9                 db ? ; undefined
+000007EA                 db ? ; undefined
+000007EB                 db ? ; undefined
+000007EC                 db ? ; undefined
+000007ED                 db ? ; undefined
+000007EE                 db ? ; undefined
+000007EF                 db ? ; undefined
+000007F0                 db ? ; undefined
+000007F1                 db ? ; undefined
+000007F2                 db ? ; undefined
+000007F3                 db ? ; undefined
+000007F4                 db ? ; undefined
+000007F5                 db ? ; undefined
+000007F6                 db ? ; undefined
+000007F7                 db ? ; undefined
+000007F8                 db ? ; undefined
+000007F9                 db ? ; undefined
+000007FA                 db ? ; undefined
+000007FB                 db ? ; undefined
+000007FC                 db ? ; undefined
+000007FD                 db ? ; undefined
+000007FE                 db ? ; undefined
+000007FF                 db ? ; undefined
+00000800                 db ? ; undefined
+00000801                 db ? ; undefined
+00000802                 db ? ; undefined
+00000803                 db ? ; undefined
+00000804                 db ? ; undefined
+00000805                 db ? ; undefined
+00000806                 db ? ; undefined
+00000807                 db ? ; undefined
+00000808                 db ? ; undefined
+00000809                 db ? ; undefined
+0000080A                 db ? ; undefined
+0000080B                 db ? ; undefined
+0000080C                 db ? ; undefined
+0000080D                 db ? ; undefined
+0000080E                 db ? ; undefined
+0000080F                 db ? ; undefined
+00000810                 db ? ; undefined
+00000811                 db ? ; undefined
+00000812                 db ? ; undefined
+00000813                 db ? ; undefined
+00000814                 db ? ; undefined
+00000815                 db ? ; undefined
+00000816                 db ? ; undefined
+00000817                 db ? ; undefined
+00000818                 db ? ; undefined
+00000819                 db ? ; undefined
+0000081A                 db ? ; undefined
+0000081B                 db ? ; undefined
+0000081C                 db ? ; undefined
+0000081D                 db ? ; undefined
+0000081E                 db ? ; undefined
+0000081F                 db ? ; undefined
+00000820                 db ? ; undefined
+00000821                 db ? ; undefined
+00000822                 db ? ; undefined
+00000823                 db ? ; undefined
+00000824                 db ? ; undefined
+00000825                 db ? ; undefined
+00000826                 db ? ; undefined
+00000827                 db ? ; undefined
+00000828                 db ? ; undefined
+00000829                 db ? ; undefined
+0000082A                 db ? ; undefined
+0000082B                 db ? ; undefined
+0000082C                 db ? ; undefined
+0000082D                 db ? ; undefined
+0000082E                 db ? ; undefined
+0000082F                 db ? ; undefined
+00000830                 db ? ; undefined
+00000831                 db ? ; undefined
+00000832                 db ? ; undefined
+00000833                 db ? ; undefined
+00000834                 db ? ; undefined
+00000835                 db ? ; undefined
+00000836                 db ? ; undefined
+00000837                 db ? ; undefined
+00000838                 db ? ; undefined
+00000839                 db ? ; undefined
+0000083A                 db ? ; undefined
+0000083B                 db ? ; undefined
+0000083C                 db ? ; undefined
+0000083D                 db ? ; undefined
+0000083E                 db ? ; undefined
+0000083F                 db ? ; undefined
+00000840                 db ? ; undefined
+00000841                 db ? ; undefined
+00000842                 db ? ; undefined
+00000843                 db ? ; undefined
+00000844                 db ? ; undefined
+00000845                 db ? ; undefined
+00000846                 db ? ; undefined
+00000847                 db ? ; undefined
+00000848                 db ? ; undefined
+00000849                 db ? ; undefined
+0000084A                 db ? ; undefined
+0000084B                 db ? ; undefined
+0000084C                 db ? ; undefined
+0000084D                 db ? ; undefined
+0000084E                 db ? ; undefined
+0000084F                 db ? ; undefined
+00000850                 db ? ; undefined
+00000851                 db ? ; undefined
+00000852                 db ? ; undefined
+00000853                 db ? ; undefined
+00000854                 db ? ; undefined
+00000855                 db ? ; undefined
+00000856                 db ? ; undefined
+00000857                 db ? ; undefined
+00000858                 db ? ; undefined
+00000859                 db ? ; undefined
+0000085A                 db ? ; undefined
+0000085B                 db ? ; undefined
+0000085C                 db ? ; undefined
+0000085D                 db ? ; undefined
+0000085E                 db ? ; undefined
+0000085F                 db ? ; undefined
+00000860                 db ? ; undefined
+00000861                 db ? ; undefined
+00000862                 db ? ; undefined
+00000863                 db ? ; undefined
+00000864                 db ? ; undefined
+00000865                 db ? ; undefined
+00000866                 db ? ; undefined
+00000867                 db ? ; undefined
+00000868                 db ? ; undefined
+00000869                 db ? ; undefined
+0000086A                 db ? ; undefined
+0000086B                 db ? ; undefined
+0000086C                 db ? ; undefined
+0000086D                 db ? ; undefined
+0000086E                 db ? ; undefined
+0000086F                 db ? ; undefined
+00000870                 db ? ; undefined
+00000871                 db ? ; undefined
+00000872                 db ? ; undefined
+00000873                 db ? ; undefined
+00000874                 db ? ; undefined
+00000875                 db ? ; undefined
+00000876                 db ? ; undefined
+00000877                 db ? ; undefined
+00000878                 db ? ; undefined
+00000879                 db ? ; undefined
+0000087A                 db ? ; undefined
+0000087B                 db ? ; undefined
+0000087C                 db ? ; undefined
+0000087D                 db ? ; undefined
+0000087E                 db ? ; undefined
+0000087F                 db ? ; undefined
+00000880                 db ? ; undefined
+00000881                 db ? ; undefined
+00000882                 db ? ; undefined
+00000883                 db ? ; undefined
+00000884                 db ? ; undefined
+00000885                 db ? ; undefined
+00000886                 db ? ; undefined
+00000887                 db ? ; undefined
+00000888                 db ? ; undefined
+00000889                 db ? ; undefined
+0000088A                 db ? ; undefined
+0000088B                 db ? ; undefined
+0000088C                 db ? ; undefined
+0000088D                 db ? ; undefined
+0000088E                 db ? ; undefined
+0000088F                 db ? ; undefined
+00000890                 db ? ; undefined
+00000891                 db ? ; undefined
+00000892                 db ? ; undefined
+00000893                 db ? ; undefined
+00000894                 db ? ; undefined
+00000895                 db ? ; undefined
+00000896                 db ? ; undefined
+00000897                 db ? ; undefined
+00000898                 db ? ; undefined
+00000899                 db ? ; undefined
+0000089A                 db ? ; undefined
+0000089B                 db ? ; undefined
+0000089C                 db ? ; undefined
+0000089D                 db ? ; undefined
+0000089E                 db ? ; undefined
+0000089F                 db ? ; undefined
+000008A0                 db ? ; undefined
+000008A1                 db ? ; undefined
+000008A2                 db ? ; undefined
+000008A3                 db ? ; undefined
+000008A4                 db ? ; undefined
+000008A5                 db ? ; undefined
+000008A6                 db ? ; undefined
+000008A7                 db ? ; undefined
+000008A8                 db ? ; undefined
+000008A9                 db ? ; undefined
+000008AA                 db ? ; undefined
+000008AB                 db ? ; undefined
+000008AC                 db ? ; undefined
+000008AD                 db ? ; undefined
+000008AE                 db ? ; undefined
+000008AF                 db ? ; undefined
+000008B0                 db ? ; undefined
+000008B1                 db ? ; undefined
+000008B2                 db ? ; undefined
+000008B3                 db ? ; undefined
+000008B4                 db ? ; undefined
+000008B5                 db ? ; undefined
+000008B6                 db ? ; undefined
+000008B7                 db ? ; undefined
+000008B8                 db ? ; undefined
+000008B9                 db ? ; undefined
+000008BA                 db ? ; undefined
+000008BB                 db ? ; undefined
+000008BC                 db ? ; undefined
+000008BD                 db ? ; undefined
+000008BE                 db ? ; undefined
+000008BF                 db ? ; undefined
+000008C0                 db ? ; undefined
+000008C1                 db ? ; undefined
+000008C2                 db ? ; undefined
+000008C3                 db ? ; undefined
+000008C4                 db ? ; undefined
+000008C5                 db ? ; undefined
+000008C6                 db ? ; undefined
+000008C7                 db ? ; undefined
+000008C8                 db ? ; undefined
+000008C9                 db ? ; undefined
+000008CA                 db ? ; undefined
+000008CB                 db ? ; undefined
+000008CC                 db ? ; undefined
+000008CD                 db ? ; undefined
+000008CE                 db ? ; undefined
+000008CF                 db ? ; undefined
+000008D0                 db ? ; undefined
+000008D1                 db ? ; undefined
+000008D2                 db ? ; undefined
+000008D3                 db ? ; undefined
+000008D4                 db ? ; undefined
+000008D5                 db ? ; undefined
+000008D6                 db ? ; undefined
+000008D7                 db ? ; undefined
+000008D8                 db ? ; undefined
+000008D9                 db ? ; undefined
+000008DA                 db ? ; undefined
+000008DB                 db ? ; undefined
+000008DC                 db ? ; undefined
+000008DD                 db ? ; undefined
+000008DE                 db ? ; undefined
+000008DF                 db ? ; undefined
+000008E0                 db ? ; undefined
+000008E1                 db ? ; undefined
+000008E2                 db ? ; undefined
+000008E3                 db ? ; undefined
+000008E4                 db ? ; undefined
+000008E5                 db ? ; undefined
+000008E6                 db ? ; undefined
+000008E7                 db ? ; undefined
+000008E8                 db ? ; undefined
+000008E9                 db ? ; undefined
+000008EA                 db ? ; undefined
+000008EB                 db ? ; undefined
+000008EC                 db ? ; undefined
+000008ED                 db ? ; undefined
+000008EE                 db ? ; undefined
+000008EF                 db ? ; undefined
+000008F0                 db ? ; undefined
+000008F1                 db ? ; undefined
+000008F2                 db ? ; undefined
+000008F3                 db ? ; undefined
+000008F4                 db ? ; undefined
+000008F5                 db ? ; undefined
+000008F6                 db ? ; undefined
+000008F7                 db ? ; undefined
+000008F8                 db ? ; undefined
+000008F9                 db ? ; undefined
+000008FA                 db ? ; undefined
+000008FB                 db ? ; undefined
+000008FC                 db ? ; undefined
+000008FD                 db ? ; undefined
+000008FE                 db ? ; undefined
+000008FF                 db ? ; undefined
+00000900                 db ? ; undefined
+00000901                 db ? ; undefined
+00000902                 db ? ; undefined
+00000903                 db ? ; undefined
+00000904                 db ? ; undefined
+00000905                 db ? ; undefined
+00000906                 db ? ; undefined
+00000907                 db ? ; undefined
+00000908                 db ? ; undefined
+00000909                 db ? ; undefined
+0000090A                 db ? ; undefined
+0000090B                 db ? ; undefined
+0000090C                 db ? ; undefined
+0000090D                 db ? ; undefined
+0000090E                 db ? ; undefined
+0000090F                 db ? ; undefined
+00000910                 db ? ; undefined
+00000911                 db ? ; undefined
+00000912                 db ? ; undefined
+00000913                 db ? ; undefined
+00000914                 db ? ; undefined
+00000915                 db ? ; undefined
+00000916                 db ? ; undefined
+00000917                 db ? ; undefined
+00000918                 db ? ; undefined
+00000919                 db ? ; undefined
+0000091A                 db ? ; undefined
+0000091B                 db ? ; undefined
+0000091C                 db ? ; undefined
+0000091D                 db ? ; undefined
+0000091E                 db ? ; undefined
+0000091F                 db ? ; undefined
+00000920                 db ? ; undefined
+00000921                 db ? ; undefined
+00000922                 db ? ; undefined
+00000923                 db ? ; undefined
+00000924                 db ? ; undefined
+00000925                 db ? ; undefined
+00000926                 db ? ; undefined
+00000927                 db ? ; undefined
+00000928                 db ? ; undefined
+00000929                 db ? ; undefined
+0000092A                 db ? ; undefined
+0000092B                 db ? ; undefined
+0000092C                 db ? ; undefined
+0000092D                 db ? ; undefined
+0000092E                 db ? ; undefined
+0000092F                 db ? ; undefined
+00000930                 db ? ; undefined
+00000931                 db ? ; undefined
+00000932                 db ? ; undefined
+00000933                 db ? ; undefined
+00000934                 db ? ; undefined
+00000935                 db ? ; undefined
+00000936                 db ? ; undefined
+00000937                 db ? ; undefined
+00000938                 db ? ; undefined
+00000939                 db ? ; undefined
+0000093A                 db ? ; undefined
+0000093B                 db ? ; undefined
+0000093C                 db ? ; undefined
+0000093D                 db ? ; undefined
+0000093E                 db ? ; undefined
+0000093F                 db ? ; undefined
+00000940                 db ? ; undefined
+00000941                 db ? ; undefined
+00000942                 db ? ; undefined
+00000943                 db ? ; undefined
+00000944                 db ? ; undefined
+00000945                 db ? ; undefined
+00000946                 db ? ; undefined
+00000947                 db ? ; undefined
+00000948                 db ? ; undefined
+00000949                 db ? ; undefined
+0000094A                 db ? ; undefined
+0000094B                 db ? ; undefined
+0000094C                 db ? ; undefined
+0000094D                 db ? ; undefined
+0000094E                 db ? ; undefined
+0000094F                 db ? ; undefined
+00000950                 db ? ; undefined
+00000951                 db ? ; undefined
+00000952                 db ? ; undefined
+00000953                 db ? ; undefined
+00000954                 db ? ; undefined
+00000955                 db ? ; undefined
+00000956                 db ? ; undefined
+00000957                 db ? ; undefined
+00000958                 db ? ; undefined
+00000959                 db ? ; undefined
+0000095A                 db ? ; undefined
+0000095B                 db ? ; undefined
+0000095C                 db ? ; undefined
+0000095D                 db ? ; undefined
+0000095E                 db ? ; undefined
+0000095F                 db ? ; undefined
+00000960                 db ? ; undefined
+00000961                 db ? ; undefined
+00000962                 db ? ; undefined
+00000963                 db ? ; undefined
+00000964                 db ? ; undefined
+00000965                 db ? ; undefined
+00000966                 db ? ; undefined
+00000967                 db ? ; undefined
+00000968                 db ? ; undefined
+00000969                 db ? ; undefined
+0000096A                 db ? ; undefined
+0000096B                 db ? ; undefined
+0000096C                 db ? ; undefined
+0000096D                 db ? ; undefined
+0000096E                 db ? ; undefined
+0000096F                 db ? ; undefined
+00000970                 db ? ; undefined
+00000971                 db ? ; undefined
+00000972                 db ? ; undefined
+00000973                 db ? ; undefined
+00000974                 db ? ; undefined
+00000975                 db ? ; undefined
+00000976                 db ? ; undefined
+00000977                 db ? ; undefined
+00000978                 db ? ; undefined
+00000979                 db ? ; undefined
+0000097A                 db ? ; undefined
+0000097B                 db ? ; undefined
+0000097C                 db ? ; undefined
+0000097D                 db ? ; undefined
+0000097E                 db ? ; undefined
+0000097F                 db ? ; undefined
+00000980                 db ? ; undefined
+00000981                 db ? ; undefined
+00000982                 db ? ; undefined
+00000983                 db ? ; undefined
+00000984                 db ? ; undefined
+00000985                 db ? ; undefined
+00000986                 db ? ; undefined
+00000987                 db ? ; undefined
+00000988                 db ? ; undefined
+00000989                 db ? ; undefined
+0000098A                 db ? ; undefined
+0000098B                 db ? ; undefined
+0000098C                 db ? ; undefined
+0000098D                 db ? ; undefined
+0000098E                 db ? ; undefined
+0000098F                 db ? ; undefined
+00000990                 db ? ; undefined
+00000991                 db ? ; undefined
+00000992                 db ? ; undefined
+00000993                 db ? ; undefined
+00000994                 db ? ; undefined
+00000995                 db ? ; undefined
+00000996                 db ? ; undefined
+00000997                 db ? ; undefined
+00000998                 db ? ; undefined
+00000999                 db ? ; undefined
+0000099A                 db ? ; undefined
+0000099B                 db ? ; undefined
+0000099C                 db ? ; undefined
+0000099D                 db ? ; undefined
+0000099E                 db ? ; undefined
+0000099F                 db ? ; undefined
+000009A0                 db ? ; undefined
+000009A1                 db ? ; undefined
+000009A2                 db ? ; undefined
+000009A3                 db ? ; undefined
+000009A4                 db ? ; undefined
+000009A5                 db ? ; undefined
+000009A6                 db ? ; undefined
+000009A7                 db ? ; undefined
+000009A8                 db ? ; undefined
+000009A9                 db ? ; undefined
+000009AA                 db ? ; undefined
+000009AB                 db ? ; undefined
+000009AC                 db ? ; undefined
+000009AD                 db ? ; undefined
+000009AE                 db ? ; undefined
+000009AF                 db ? ; undefined
+000009B0                 db ? ; undefined
+000009B1                 db ? ; undefined
+000009B2                 db ? ; undefined
+000009B3                 db ? ; undefined
+000009B4                 db ? ; undefined
+000009B5                 db ? ; undefined
+000009B6                 db ? ; undefined
+000009B7                 db ? ; undefined
+000009B8                 db ? ; undefined
+000009B9                 db ? ; undefined
+000009BA                 db ? ; undefined
+000009BB                 db ? ; undefined
+000009BC                 db ? ; undefined
+000009BD                 db ? ; undefined
+000009BE                 db ? ; undefined
+000009BF                 db ? ; undefined
+000009C0                 db ? ; undefined
+000009C1                 db ? ; undefined
+000009C2                 db ? ; undefined
+000009C3                 db ? ; undefined
+000009C4                 db ? ; undefined
+000009C5                 db ? ; undefined
+000009C6                 db ? ; undefined
+000009C7                 db ? ; undefined
+000009C8                 db ? ; undefined
+000009C9                 db ? ; undefined
+000009CA                 db ? ; undefined
+000009CB                 db ? ; undefined
+000009CC                 db ? ; undefined
+000009CD                 db ? ; undefined
+000009CE                 db ? ; undefined
+000009CF                 db ? ; undefined
+000009D0                 db ? ; undefined
+000009D1                 db ? ; undefined
+000009D2                 db ? ; undefined
+000009D3                 db ? ; undefined
+000009D4                 db ? ; undefined
+000009D5                 db ? ; undefined
+000009D6                 db ? ; undefined
+000009D7                 db ? ; undefined
+000009D8                 db ? ; undefined
+000009D9                 db ? ; undefined
+000009DA                 db ? ; undefined
+000009DB                 db ? ; undefined
+000009DC                 db ? ; undefined
+000009DD                 db ? ; undefined
+000009DE                 db ? ; undefined
+000009DF                 db ? ; undefined
+000009E0                 db ? ; undefined
+000009E1                 db ? ; undefined
+000009E2                 db ? ; undefined
+000009E3                 db ? ; undefined
+000009E4                 db ? ; undefined
+000009E5                 db ? ; undefined
+000009E6                 db ? ; undefined
+000009E7                 db ? ; undefined
+000009E8                 db ? ; undefined
+000009E9                 db ? ; undefined
+000009EA                 db ? ; undefined
+000009EB                 db ? ; undefined
+000009EC                 db ? ; undefined
+000009ED                 db ? ; undefined
+000009EE                 db ? ; undefined
+000009EF                 db ? ; undefined
+000009F0                 db ? ; undefined
+000009F1                 db ? ; undefined
+000009F2                 db ? ; undefined
+000009F3                 db ? ; undefined
+000009F4                 db ? ; undefined
+000009F5                 db ? ; undefined
+000009F6                 db ? ; undefined
+000009F7                 db ? ; undefined
+000009F8                 db ? ; undefined
+000009F9                 db ? ; undefined
+000009FA                 db ? ; undefined
+000009FB                 db ? ; undefined
+000009FC                 db ? ; undefined
+000009FD                 db ? ; undefined
+000009FE                 db ? ; undefined
+000009FF                 db ? ; undefined
+00000A00                 db ? ; undefined
+00000A01                 db ? ; undefined
+00000A02                 db ? ; undefined
+00000A03                 db ? ; undefined
+00000A04                 db ? ; undefined
+00000A05                 db ? ; undefined
+00000A06                 db ? ; undefined
+00000A07                 db ? ; undefined
+00000A08                 db ? ; undefined
+00000A09                 db ? ; undefined
+00000A0A                 db ? ; undefined
+00000A0B                 db ? ; undefined
+00000A0C                 db ? ; undefined
+00000A0D                 db ? ; undefined
+00000A0E                 db ? ; undefined
+00000A0F                 db ? ; undefined
+00000A10                 db ? ; undefined
+00000A11                 db ? ; undefined
+00000A12                 db ? ; undefined
+00000A13                 db ? ; undefined
+00000A14                 db ? ; undefined
+00000A15                 db ? ; undefined
+00000A16                 db ? ; undefined
+00000A17                 db ? ; undefined
+00000A18                 db ? ; undefined
+00000A19                 db ? ; undefined
+00000A1A                 db ? ; undefined
+00000A1B                 db ? ; undefined
+00000A1C                 db ? ; undefined
+00000A1D                 db ? ; undefined
+00000A1E                 db ? ; undefined
+00000A1F                 db ? ; undefined
+00000A20                 db ? ; undefined
+00000A21                 db ? ; undefined
+00000A22                 db ? ; undefined
+00000A23                 db ? ; undefined
+00000A24                 db ? ; undefined
+00000A25                 db ? ; undefined
+00000A26                 db ? ; undefined
+00000A27                 db ? ; undefined
+00000A28                 db ? ; undefined
+00000A29                 db ? ; undefined
+00000A2A                 db ? ; undefined
+00000A2B                 db ? ; undefined
+00000A2C                 db ? ; undefined
+00000A2D                 db ? ; undefined
+00000A2E                 db ? ; undefined
+00000A2F                 db ? ; undefined
+00000A30                 db ? ; undefined
+00000A31                 db ? ; undefined
+00000A32                 db ? ; undefined
+00000A33                 db ? ; undefined
+00000A34                 db ? ; undefined
+00000A35                 db ? ; undefined
+00000A36                 db ? ; undefined
+00000A37                 db ? ; undefined
+00000A38                 db ? ; undefined
+00000A39                 db ? ; undefined
+00000A3A                 db ? ; undefined
+00000A3B                 db ? ; undefined
+00000A3C                 db ? ; undefined
+00000A3D                 db ? ; undefined
+00000A3E                 db ? ; undefined
+00000A3F                 db ? ; undefined
+00000A40                 db ? ; undefined
+00000A41                 db ? ; undefined
+00000A42                 db ? ; undefined
+00000A43                 db ? ; undefined
+00000A44                 db ? ; undefined
+00000A45                 db ? ; undefined
+00000A46                 db ? ; undefined
+00000A47                 db ? ; undefined
+00000A48                 db ? ; undefined
+00000A49                 db ? ; undefined
+00000A4A                 db ? ; undefined
+00000A4B                 db ? ; undefined
+00000A4C                 db ? ; undefined
+00000A4D                 db ? ; undefined
+00000A4E                 db ? ; undefined
+00000A4F                 db ? ; undefined
+00000A50 field_A50       db ?
+00000A51 field_A51       db ?
+00000A52                 db ? ; undefined
+00000A53                 db ? ; undefined
+00000A54 field_A54       dd ?
+00000A58 field_A58       dd ?
+00000A5C field_A5C       db ?
+00000A5D field_A5D       db ?
+00000A5E                 db ? ; undefined
+00000A5F                 db ? ; undefined
+00000A60 field_A60       dd ?
+00000A64 field_A64       dd ?
+00000A68 field_A68       dd ?
+00000A6C field_A6C       dd ?
+00000A70 m_pMoveBlend    dd ?
+00000A74 field_A74       dd ?
+00000A78                 db ? ; undefined
+00000A79                 db ? ; undefined
+00000A7A                 db ? ; undefined
+00000A7B                 db ? ; undefined
+00000A7C                 db ? ; undefined
+00000A7D                 db ? ; undefined
+00000A7E                 db ? ; undefined
+00000A7F                 db ? ; undefined
+00000A80 field_A80       dd ?
+00000A84 field_A84       dd ?
+00000A88 field_A88       dd ?
+00000A8C field_A8C       dd ?
+00000A90 field_A90       dd ?
+00000A94 field_A94       dd ?
+00000A98 field_A98       dd ?
+00000A9C field_A9C       dd ?
+00000AA0 field_AA0       dd ?
+00000AA4 field_AA4       dd ?
+00000AA8                 db ? ; undefined
+00000AA9                 db ? ; undefined
+00000AAA                 db ? ; undefined
+00000AAB                 db ? ; undefined
+00000AAC                 db ? ; undefined
+00000AAD                 db ? ; undefined
+00000AAE                 db ? ; undefined
+00000AAF                 db ? ; undefined
+00000AB0 field_AB0       Vector4 ?
+00000AC0 field_AC0       Vector4 ?
+00000AD0 field_AD0       Vector4 ?
+00000AE0 field_AE0       Vector4 ?
+00000AF0 field_AF0       Vector4 ?
+00000B00 field_B00       dd ?
+00000B04 field_B04       dd ?
+00000B08 field_B08       dd ?
+00000B0C                 db ? ; undefined
+00000B0D                 db ? ; undefined
+00000B0E                 db ? ; undefined
+00000B0F                 db ? ; undefined
+00000B10 field_B10       dd ?
+00000B14 field_B14       dd ?
+00000B18 field_B18       dd ?
+00000B1C                 db ? ; undefined
+00000B1D                 db ? ; undefined
+00000B1E                 db ? ; undefined
+00000B1F                 db ? ; undefined
+00000B20 field_B20       dd ?
+00000B24 field_B24       dd ?
+00000B28 field_B28       dd ?
+00000B2C field_B2C       dd ?
+00000B30 field_B30       dd ?
+00000B34 field_B34       dd ?
+00000B38 field_B38       dd ?
+00000B3C field_B3C       dd ?
+00000B40 field_B40       dd ?
+00000B44 field_B44       dd ?
+00000B48 field_B48       dd ?
+00000B4C field_B4C       dd ?
+00000B50 field_B50       dd ?
+00000B54 field_B54       dd ?
+00000B58 field_B58       dd ?
+00000B5C field_B5C       dd ?
+00000B60 field_B60       dd ?
+00000B64 field_B64       dd ?
+00000B68 field_B68       dd ?
+00000B6C field_B6C       dd ?
+00000B70 field_B70       dd ?
+00000B74 field_B74       dd ?                    ; pbuffer
+00000B78 field_B78       dd ?                    ; pbuffer
+00000B7C field_B7C       dd ?
+00000B80 field_B80       dd ?
+00000B84 field_B84       dd ?
+00000B88 field_B88       dd ?
+00000B8C field_B8C       dd ?
+00000B90 field_B90       dd ?
+00000B94                 db ? ; undefined
+00000B95                 db ? ; undefined
+00000B96                 db ? ; undefined
+00000B97                 db ? ; undefined
+00000B98                 db ? ; undefined
+00000B99                 db ? ; undefined
+00000B9A                 db ? ; undefined
+00000B9B                 db ? ; undefined
+00000B9C                 db ? ; undefined
+00000B9D                 db ? ; undefined
+00000B9E                 db ? ; undefined
+00000B9F                 db ? ; undefined
+00000BA0 m_ikManager     CIkManager ?
+00000D10 field_D10       dd ?
+00000D14 field_D14       dd ?
+00000D18 field_D18       dd ?
+00000D1C                 db ? ; undefined
+00000D1D                 db ? ; undefined
+00000D1E                 db ? ; undefined
+00000D1F                 db ? ; undefined
+00000D20 field_D20       db ?
+00000D21                 db ? ; undefined
+00000D22 field_D22       db ?
+00000D23                 db ? ; undefined
+00000D24 field_D24       dd ?
+00000D28 field_D28       dd ?
+00000D2C field_D2C       dd ?
+00000D30 field_D30       dd ?
+00000D34 field_D34       db ?
+00000D35                 db ? ; undefined
+00000D36                 db ? ; undefined
+00000D37                 db ? ; undefined
+00000D38 field_D38       dd ?
+00000D3C field_D3C       dd ?
+00000D40 field_D40       dd ?
+00000D44 field_D44       dd ?
+00000D48 field_D48       dd 4 dup(?)
+00000D58 field_D58       dd ?
+00000D5C                 db ? ; undefined
+00000D5D                 db ? ; undefined
+00000D5E                 db ? ; undefined
+00000D5F                 db ? ; undefined
+00000D60 field_D60       Vector4 ?
+00000D70 field_D70       dd ?
+00000D74 field_D74       dd ?
+00000D78 field_D78       CPed_obj2 ?
+00000DE0 field_DE0       dd ?
+00000DE4 field_DE4       dd ?
+00000DE8 field_DE8       dd ?
+00000DEC field_DEC       dd ?
+00000DF0 field_DF0       dd ?
+00000DF4 field_DF4       dd ?
+00000DF8 field_DF8       dd ?
+00000DFC field_DFC       dd ?
+00000E00 field_E00       db ?
+00000E01 field_E01       db 15 dup(?)
+00000E10 field_E10       Vector4 ?
+00000E20 field_E20       Vector4 ?
+00000E30 field_E30       dd ?
+00000E34 field_E34       dd ?
+00000E38 field_E38       dd ?
+00000E3C field_E3C       dd ?
+00000E40 field_E40       dd ?
+00000E44 field_E44       db ?
+00000E45                 db ? ; undefined
+00000E46                 db ? ; undefined
+00000E47                 db ? ; undefined
+00000E48 field_E48       dd ?
+00000E4C CPed            ends
+
+-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+CVehicle:
+00000000 CVehicle        struc ; (sizeof=0x1350)
+00000000 __parent        CPhysical ?
+00000210 field_210       dd ?
+00000214                 db ? ; undefined
+00000215                 db ? ; undefined
+00000216                 db ? ; undefined
+00000217                 db ? ; undefined
+00000218                 db ? ; undefined
+00000219                 db ? ; undefined
+0000021A                 db ? ; undefined
+0000021B                 db ? ; undefined
+0000021C                 db ? ; undefined
+0000021D                 db ? ; undefined
+0000021E                 db ? ; undefined
+0000021F                 db ? ; undefined
+00000220                 db ? ; undefined
+00000221                 db ? ; undefined
+00000222                 db ? ; undefined
+00000223                 db ? ; undefined
+00000224                 db ? ; undefined
+00000225                 db ? ; undefined
+00000226                 db ? ; undefined
+00000227                 db ? ; undefined
+00000228                 db ? ; undefined
+00000229                 db ? ; undefined
+0000022A                 db ? ; undefined
+0000022B                 db ? ; undefined
+0000022C                 db ? ; undefined
+0000022D                 db ? ; undefined
+0000022E                 db ? ; undefined
+0000022F                 db ? ; undefined
+00000230                 db ? ; undefined
+00000231                 db ? ; undefined
+00000232                 db ? ; undefined
+00000233                 db ? ; undefined
+00000234                 db ? ; undefined
+00000235                 db ? ; undefined
+00000236                 db ? ; undefined
+00000237                 db ? ; undefined
+00000238                 db ? ; undefined
+00000239                 db ? ; undefined
+0000023A                 db ? ; undefined
+0000023B                 db ? ; undefined
+0000023C                 db ? ; undefined
+0000023D                 db ? ; undefined
+0000023E                 db ? ; undefined
+0000023F                 db ? ; undefined
+00000240                 db ? ; undefined
+00000241                 db ? ; undefined
+00000242                 db ? ; undefined
+00000243                 db ? ; undefined
+00000244                 db ? ; undefined
+00000245                 db ? ; undefined
+00000246                 db ? ; undefined
+00000247                 db ? ; undefined
+00000248                 db ? ; undefined
+00000249                 db ? ; undefined
+0000024A                 db ? ; undefined
+0000024B                 db ? ; undefined
+0000024C                 db ? ; undefined
+0000024D                 db ? ; undefined
+0000024E                 db ? ; undefined
+0000024F                 db ? ; undefined
+00000250 field_250       db ?
+00000251                 db ? ; undefined
+00000252                 db ? ; undefined
+00000253                 db ? ; undefined
+00000254                 db ? ; undefined
+00000255                 db ? ; undefined
+00000256                 db ? ; undefined
+00000257                 db ? ; undefined
+00000258                 db ? ; undefined
+00000259                 db ? ; undefined
+0000025A                 db ? ; undefined
+0000025B                 db ? ; undefined
+0000025C                 db ? ; undefined
+0000025D                 db ? ; undefined
+0000025E                 db ? ; undefined
+0000025F                 db ? ; undefined
+00000260 m_vehicleAudio  audVehicleAudioEntity ?
+00000DB0 m_fireAudio     audFireAudioEntity ?
+00000E08 m_audioTracker  audPlaceableTracker ?
+00000E14 field_E14       dd ?
+00000E18 m_pHandling     dd ?
+00000E1C m_dwHandlingFlags dd ?
+00000E20 field_E20       dd ?
+00000E24 field_E24       CVehicle_obj1 ?
+00000F64 field_F64       db ?
+00000F65 field_F65       db ?
+00000F66 field_F66       db ?
+00000F67 field_F67       db ?
+00000F68 field_F68       db ?
+00000F69 field_F69       db ?
+00000F6A field_F6A       db ?
+00000F6B field_F6B       db ?
+00000F6C field_F6C       db ?
+00000F6D field_F6D       db ?
+00000F6E field_F6E       db ?
+00000F6F field_F6F       db ?
+00000F70 field_F70       db ?
+00000F71 field_F71       db ?
+00000F72                 db ? ; undefined
+00000F73                 db ? ; undefined
+00000F74 field_F74       dd ?
+00000F78 field_F78       dd ?
+00000F7C field_F7C       dd ?
+00000F80 field_F80       dd ?
+00000F84 field_F84       dd ?                    ; float
+00000F88 field_F88       dd ?
+00000F8C                 db ? ; undefined
+00000F8D                 db ? ; undefined
+00000F8E                 db ? ; undefined
+00000F8F                 db ? ; undefined
+00000F90                 db ? ; undefined
+00000F91                 db ? ; undefined
+00000F92                 db ? ; undefined
+00000F93                 db ? ; undefined
+00000F94                 db ? ; undefined
+00000F95                 db ? ; undefined
+00000F96                 db ? ; undefined
+00000F97                 db ? ; undefined
+00000F98 field_F98       dw ?
+00000F9A field_F9A       dw ?
+00000F9C field_F9C       dw ?
+00000F9E                 db ? ; undefined
+00000F9F                 db ? ; undefined
+00000FA0 field_FA0       dd ?
+00000FA4 field_FA4       dd 8 dup(?)
+00000FC4 field_FC4       dd ?                    ; float
+00000FC8 field_FC8       dd ?
+00000FCC field_FCC       db ?
+00000FCD                 db ? ; undefined
+00000FCE                 db ? ; undefined
+00000FCF                 db ? ; undefined
+00000FD0 field_FD0       dd ?
+00000FD4 field_FD4       dd ?
+00000FD8 field_FD8       dd ?
+00000FDC field_FDC       dd ?
+00000FE0 field_FE0       dd ?
+00000FE4 field_FE4       db 4 dup(?)             ; colors ?
+00000FE8 field_FE8       db ?
+00000FE9                 db ? ; undefined
+00000FEA                 db ? ; undefined
+00000FEB                 db ? ; undefined
+00000FEC field_FEC       dd ?
+00000FF0                 db ? ; undefined
+00000FF1                 db ? ; undefined
+00000FF2                 db ? ; undefined
+00000FF3                 db ? ; undefined
+00000FF4 field_FF4       dd ?
+00000FF8 field_FF8       dd ?
+00000FFC field_FFC       CVehicle_obj3 8 dup(?)
+0000109C field_109C      dd ?
+000010A0 field_10A0      Vector3 ?
+000010AC                 db ? ; undefined
+000010AD                 db ? ; undefined
+000010AE                 db ? ; undefined
+000010AF                 db ? ; undefined
+000010B0 field_10B0      Vector3 ?
+000010BC                 db ? ; undefined
+000010BD                 db ? ; undefined
+000010BE                 db ? ; undefined
+000010BF                 db ? ; undefined
+000010C0 field_10C0      db ?
+000010C1 field_10C1      db ?
+000010C2 field_10C2      db ?
+000010C3                 db ? ; undefined
+000010C4 field_10C4      dw ?
+000010C6                 db ? ; undefined
+000010C7                 db ? ; undefined
+000010C8 field_10C8      dd ?                    ; float
+000010CC field_10CC      dd ?                    ; float
+000010D0 field_10D0      dd ?                    ; float
+000010D4 field_10D4      dd ?                    ; float
+000010D8 field_10D8      dd ?                    ; float
+000010DC field_10DC      dd ?                    ; float
+000010E0 field_10E0      CVehicle_obj4 ?
+00001108 field_1108      db ?
+00001109                 db ? ; undefined
+0000110A                 db ? ; undefined
+0000110B                 db ? ; undefined
+0000110C field_110C      dd ?
+00001110 field_1110      dw ?
+00001112 field_1112      db ?
+00001113                 db ? ; undefined
+00001114 field_1114      dw ?
+00001116                 db ? ; undefined
+00001117                 db ? ; undefined
+00001118 field_1118      dd ?                    ; float
+0000111C                 db ? ; undefined
+0000111D                 db ? ; undefined
+0000111E                 db ? ; undefined
+0000111F                 db ? ; undefined
+00001120 field_1120      CVehicle_obj5 ?
+000012DC                 db ? ; undefined
+000012DD                 db ? ; undefined
+000012DE                 db ? ; undefined
+000012DF                 db ? ; undefined
+000012E0 field_12E0      dd ?
+000012E4 field_12E4      dd ?
+000012E8 field_12E8      dd ?
+000012EC field_12EC      dd ?
+000012F0 field_12F0      dd ?
+000012F4 field_12F4      dd ?
+000012F8 field_12F8      dd ?
+000012FC field_12FC      dd ?
+00001300 field_1300      dd ?
+00001304 field_1304      dd ?
+00001308 field_1308      dd ?
+0000130C field_130C      dw ?
+0000130E field_130E      dw ?
+00001310 field_1310      dd ?
+00001314 field_1314      dd ?
+00001318 field_1318      dd ?                    ; float
+0000131C field_131C      dd ?                    ; float
+00001320 field_1320      dd ?
+00001324 field_1324      dd ?
+00001328 field_1328      dd ?
+0000132C field_132C      dd ?
+00001330 field_1330      dd ?                    ; float
+00001334 field_1334      db ?
+00001335 field_1335      db ?
+00001336 field_1336      db ?
+00001337 field_1337      db ?
+00001338 field_1338      dd ?
+0000133C field_133C      dd ?
+00001340 field_1340      db ?
+00001341 field_1341      db ?
+00001342 field_1342      db ?
+00001343 field_1343      db ?
+00001344 field_1344      db ?
+00001345 field_1345      db ?
+00001346 field_1346      db ?
+00001347 field_1347      db ?
+00001348 field_1348      dd ?                    ; float
+0000134C field_134C      db ?
+0000134D field_134D      db 3 dup(?)
+00001350 CVehicle        ends

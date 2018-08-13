@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/209/trunk/server/Server/sq
+END
+sqstdaux.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/124/trunk/server/Server/sq/sqstdaux.h
+END
+sqstdblob.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/124/trunk/server/Server/sq/sqstdblob.h
+END
+sqstdsystem.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/124/trunk/server/Server/sq/sqstdsystem.h
+END
+sqstdstring.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/209/trunk/server/Server/sq/sqstdstring.h
+END
+sqstdio.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/124/trunk/server/Server/sq/sqstdio.h
+END
+squirrel.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/209/trunk/server/Server/sq/squirrel.h
+END
+sqstdmath.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/124/trunk/server/Server/sq/sqstdmath.h
+END

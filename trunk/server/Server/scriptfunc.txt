@@ -1,0 +1,4 @@
+int CreateCar(int model, float x, float y, float z, float angle, int color1, int color2)
+void GiveWeapon(int playerid, int gun, int ammo)
+int addPlayerClass(int model, float x, float y, float z, float angle, int gun1, int ammo1, int gun2, int ammo2, int gun3, int ammo3)
+void enableComponentSelect(bool enable)

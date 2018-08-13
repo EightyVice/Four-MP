@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/284/trunk/client/FMP/d3d9
+END
+d3d9dev.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/124/trunk/client/FMP/d3d9/d3d9dev.h
+END
+d3d9tex.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/124/trunk/client/FMP/d3d9/d3d9tex.h
+END
+gui.h
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/221/trunk/client/FMP/d3d9/gui.h
+END
+d3d9hook.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/284/trunk/client/FMP/d3d9/d3d9hook.h
+END
+d3d9int.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/251/trunk/client/FMP/d3d9/d3d9int.cpp
+END
+d3d9dev.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/251/trunk/client/FMP/d3d9/d3d9dev.cpp
+END
+d3d9int.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/212/trunk/client/FMP/d3d9/d3d9int.h
+END
+d3d9tex.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/251/trunk/client/FMP/d3d9/d3d9tex.cpp
+END
+gui.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/284/trunk/client/FMP/d3d9/gui.cpp
+END
+d3d9hook.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/212/trunk/client/FMP/d3d9/d3d9hook.cpp
+END

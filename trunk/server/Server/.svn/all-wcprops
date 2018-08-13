@@ -1,0 +1,179 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/292/trunk/server/Server
+END
+con_fmpcvarhooks.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/223/trunk/server/Server/con_fmpcvarhooks.cpp
+END
+con_fmpcommands.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/209/trunk/server/Server/con_fmpcommands.cpp
+END
+VirtualMachineManager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/290/trunk/server/Server/VirtualMachineManager.cpp
+END
+con_fmpcvarhooks.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/124/trunk/server/Server/con_fmpcvarhooks.h
+END
+con_fmpcommands.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/124/trunk/server/Server/con_fmpcommands.h
+END
+sqstdlib.lib
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/209/trunk/server/Server/sqstdlib.lib
+END
+VehicleManager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/162/trunk/server/Server/VehicleManager.cpp
+END
+VirtualMachineManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/288/trunk/server/Server/VirtualMachineManager.h
+END
+MasterServerManager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/284/trunk/server/Server/MasterServerManager.cpp
+END
+scriptfunc.txt
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/124/trunk/server/Server/scriptfunc.txt
+END
+ServerCore.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/288/trunk/server/Server/ServerCore.cpp
+END
+VehicleManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/251/trunk/server/Server/VehicleManager.h
+END
+MasterServerManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/229/trunk/server/Server/MasterServerManager.h
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/287/trunk/server/Server/main.cpp
+END
+ServerCore.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/288/trunk/server/Server/ServerCore.h
+END
+NetworkManager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/292/trunk/server/Server/NetworkManager.cpp
+END
+CoreHandleTypesManager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/209/trunk/server/Server/CoreHandleTypesManager.cpp
+END
+HandleManager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/284/trunk/server/Server/HandleManager.cpp
+END
+PlayerManager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/284/trunk/server/Server/PlayerManager.cpp
+END
+Server.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/287/trunk/server/Server/Server.vcproj
+END
+NetworkManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/287/trunk/server/Server/NetworkManager.h
+END
+PluginManager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/284/trunk/server/Server/PluginManager.cpp
+END
+CoreHandleTypesManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/209/trunk/server/Server/CoreHandleTypesManager.h
+END
+squirrel.lib
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/209/trunk/server/Server/squirrel.lib
+END
+IPluginHandlerInterface.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/233/trunk/server/Server/IPluginHandlerInterface.h
+END
+HandleManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/156/trunk/server/Server/HandleManager.h
+END
+PlayerManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/292/trunk/server/Server/PlayerManager.h
+END
+IPluginInterface.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/209/trunk/server/Server/IPluginInterface.h
+END
+PluginManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/209/trunk/server/Server/PluginManager.h
+END

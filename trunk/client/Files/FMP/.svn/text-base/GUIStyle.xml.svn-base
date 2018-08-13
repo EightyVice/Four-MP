@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<GUI>
+	<Under parent="none">
+		<Element name="SERVER_BROWSER">
+			<Base string="style" number="0" value="WindowBig"/>
+			<Base string="style" number="1" value="CloseButtonBig"/>
+			<Base string="style" number="2" value="TitleBarBig"/>
+		</Element>
+	</Under>
+	<Under parent="SERVER_BROWSER">
+		<Element name="TAB_INTERNET">
+			<Base string="style" number="0" value="ButtonTab"/>
+			<Base string="x" value="20"/>
+			<Base string="y" value="32"/>
+		</Element>
+		<Element name="TAB_LAN">
+			<Base string="style" number="0" value="ButtonTab"/>
+			<Base string="x" value="169"/>
+			<Base string="y" value="32"/>
+		</Element>
+		<Element name="TAB_VIP">
+			<Base string="style" number="0" value="ButtonTab"/>
+			<Base string="x" value="318"/>
+			<Base string="y" value="32"/>
+		</Element>
+		<Element name="TAB_FAVOURITE">
+			<Base string="style" number="0" value="ButtonTab"/>
+			<Base string="x" value="467"/>
+			<Base string="y" value="32"/>
+		</Element>
+		
+		<Element name="SERVER_LIST">
+			<Base string="x" value="0"/>
+			<Base string="y" value="59"/>
+		</Element>
+		<Element name="PLAYER_LIST">
+			<Base string="x" value="546"/>
+			<Base string="y" value="78"/>
+		</Element>
+		<Element name="EDIT_IP">
+			<Base string="x" value="600"/>
+			<Base string="y" value="325"/>
+		</Element>
+		<Element name="EDIT_PORT">
+			<Base string="x" value="625"/>
+			<Base string="y" value="360"/>
+		</Element>
+		<Element name="TEXT_IP">
+			<Base string="x" value="560"/>
+			<Base string="y" value="330"/>
+		</Element>
+		<Element name="TEXT_PORT">
+			<Base string="x" value="560"/>
+			<Base string="y" value="365"/>
+		</Element>
+		
+		<Element name="MAN_CONNECT">
+			<Base string="x" value="560"/>
+			<Base string="y" value="410"/>
+		</Element>
+		<Element name="MAN_REFRESH">
+			<Base string="x" value="660"/>
+			<Base string="y" value="410"/>
+		</Element>
+		<Element name="MAN_ADDFAV">
+			<Base string="x" value="600"/>
+			<Base string="y" value="435"/>
+		</Element>
+
+		<Element name="FILTER_PING">
+			<Base string="x" value="150"/>
+			<Base string="y" value="410"/>
+		</Element>
+		<Element name="FILTER_NOT_FULL">
+			<Base string="x" value="150"/>
+			<Base string="y" value="440"/>
+		</Element>
+		<Element name="FILTER_LOCATION">
+			<Base string="x" value="305"/>
+			<Base string="y" value="410"/>
+		</Element>
+		<Element name="FILTER_MODE">
+			<Base string="x" value="305"/>
+			<Base string="y" value="440"/>
+		</Element>
+		<Element name="FILTER_NOT_EMPTY">
+			<Base string="x" value="486"/>
+			<Base string="y" value="414"/>
+		</Element>
+		<Element name="FILTER_NO_PASSWORD">
+			<Base string="x" value="486"/>
+			<Base string="y" value="440"/>
+		</Element>
+	
+		<Image src="FMPGUI/in_bg.png" x="0" y="32" width="750" height="43" r="255" g="255" b="255" a="255"/>
+		<Image src="FMPGUI/in_razd.png" x="18" y="32" width="49" height="29" r="255" g="255" b="255" a="255"/>
+		<Image src="FMPGUI/in_razd.png" x="168" y="32" width="49" height="29" r="255" g="255" b="255" a="255"/>
+		<Image src="FMPGUI/in_razd.png" x="318" y="32" width="49" height="29" r="255" g="255" b="255" a="255"/>
+		<Image src="FMPGUI/in_razd.png" x="468" y="32" width="49" height="29" r="255" g="255" b="255" a="255"/>
+		<Image src="FMPGUI/in_razd.png" x="618" y="32" width="49" height="29" r="255" g="255" b="255" a="255"/>
+		<Box x="546" y="59" width="204" height="20">
+			<Color string="Inner" r="64" g="64" b="62" a="255"/>
+			<Color string="Border" r="0" g="0" b="0" a="255"/>
+		</Box>
+		<Text x="610" y="29" width="100" string="Server Info:" name="STR_SERVER_INFO"/>
+		<Box x="546" y="277" width="204" height="20">
+			<Color string="Inner" r="64" g="64" b="62" a="255"/>
+			<Color string="Border" r="0" g="0" b="0" a="255"/>
+		</Box>
+		<Text x="610" y="247" width="100" string="Server Manager" name="STR_SERVER_MAN"/>
+		<Box x="0" y="408" width="80" height="62">
+			<Color string="Inner" r="64" g="64" b="62" a="255"/>
+			<Color string="Border" r="0" g="0" b="0" a="255"/>
+		</Box>
+		<Text x="10" y="400" width="80" string="Filters" name="STR_FILTER"/>
+		<Text x="100" y="385" width="80" string="Ping" name="STR_FILTER_PING"/>
+		<Text x="100" y="410" width="80" string="Not full" name="STR_FILTER_NOTFULL"/>
+		<Text x="250" y="385" width="80" string="Location" name="STR_FILTER_LOC"/>
+		<Text x="250" y="410" width="80" string="Mode" name="STR_FILTER_MODE"/>
+		<Text x="400" y="385" width="80" string="Not empty" name="STR_FILTER_NOTEMPTY"/>
+		<Text x="400" y="410" width="80" string="No password" name="STR_FILTER_NOPASS"/>	
+		<Line sx="546" sy="62" ex="546" ey="480" size="1" r="0" g="0" b="0" a="255"/>
+		<Image src="FMPGUI/stat_bg.png" x="0" y="470" width="750" height="26" r="255" g="255" b="255" a="255"/>
+		
+		<Element name="STR_FILTER">
+			<Font name="Tahoma" size="14" bold="1" italic="0"/>
+			<Base string="y" value="427"/>
+		</Element>
+	</Under>
+</GUI>

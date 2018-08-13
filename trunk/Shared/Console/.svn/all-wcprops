@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/262/trunk/Shared/Console
+END
+ConAlias.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/209/trunk/Shared/Console/ConAlias.cpp
+END
+common.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/162/trunk/Shared/Console/common.h
+END
+ConVar.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/209/trunk/Shared/Console/ConVar.h
+END
+ConAlias.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/209/trunk/Shared/Console/ConAlias.h
+END
+ConSymbolBase.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/209/trunk/Shared/Console/ConSymbolBase.cpp
+END
+ConsoleScreen.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/262/trunk/Shared/Console/ConsoleScreen.cpp
+END
+ConCmd.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/209/trunk/Shared/Console/ConCmd.cpp
+END
+ConSymbolBase.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/209/trunk/Shared/Console/ConSymbolBase.h
+END
+ConsoleScreen.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/209/trunk/Shared/Console/ConsoleScreen.h
+END
+ConCmd.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/209/trunk/Shared/Console/ConCmd.h
+END
+coreconcommands.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/209/trunk/Shared/Console/coreconcommands.cpp
+END
+ConsoleCore.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/209/trunk/Shared/Console/ConsoleCore.cpp
+END
+Console.sln
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/124/trunk/Shared/Console/Console.sln
+END
+coreconcommands.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/124/trunk/Shared/Console/coreconcommands.h
+END
+ConsoleCore.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/209/trunk/Shared/Console/ConsoleCore.h
+END
+Console.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/209/trunk/Shared/Console/Console.vcproj
+END
+condefs.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/209/trunk/Shared/Console/condefs.h
+END
+ConVar.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/209/trunk/Shared/Console/ConVar.cpp
+END
+common.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/124/trunk/Shared/Console/common.cpp
+END

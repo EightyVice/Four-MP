@@ -1,0 +1,288 @@
+<?xml version="1.0"?>
+<GUI>
+	<ColorThemes default="FMPGUI">
+		<FMPGUI>
+			<Window default="Norm">
+				<State string="Norm">
+					<Color string="Body" r="64" g="64" b="64" a="255"/>
+
+					<Texture string="BorderCL" path="border/border_c_l.png" r="255" g="255" b="255" a="255"/>
+					<Texture string="BorderCR" path="border/border_c_r.png" r="255" g="255" b="255" a="255"/>
+					<Texture string="BorderUL" path="border/border_u_l.png" r="255" g="255" b="255" a="255"/>
+					<Texture string="BorderDL" path="border/border_d_l.png" r="255" g="255" b="255" a="255"/>
+					<Texture string="BorderUR" path="border/border_u_r.png" r="255" g="255" b="255" a="255"/>
+					<Texture string="BorderDR" path="border/border_d_r.png" r="255" g="255" b="255" a="255"/>
+					<Texture string="BorderUC" path="border/border_u_c.png" r="255" g="255" b="255" a="255"/>
+					<Texture string="BorderRC" path="border/border_d_c.png" r="255" g="255" b="255" a="255"/>
+					
+					<Int string="BorderHeight" value="8"/>
+					<Int string="BorderWidth" value="8"/>
+					<Int string="BorderMargin" value="2"/>
+				</State>
+			</Window>
+			<TitleBar default="Norm">
+				<State string="Norm">
+					<Color string="Title" r="0" g="0" b="0" a="255"/>
+					<Texture string="Titlebar" path="TitleMini.png" r="255" g="255" b="255" a="255"/>
+					<Int string="Height" value="26"/>
+				</State>
+				<State string="Minimized">
+					<Texture string="Titlebar" path="Title.png" r="255" g="255" b="255" a="255"/>
+				</State>
+				<State string="Dragging">
+					<Texture string="Titlebar" path="Title.png" r="255" g="255" b="255" a="255"/>
+				</State>
+			</TitleBar>
+			<CloseButton default="Norm">
+				<State string="Norm">
+					<Texture string="Button" path="close.png" r="255" g="255" b="255" a="255"/>
+					<Int string="RightMargin" value="30"/>
+					<Int string="TopMargin" value="0"/>
+					<Int string="Width" value="27"/>
+					<Int string="Height" value="16"/>
+				</State>
+				<State string="MouseOver">
+					<Texture string="Button" path="close.png" r="255" g="200" b="200" a="255"/>
+				</State>
+				<State string="Disabled">
+					<Texture string="Button" path="close.png" r="128" g="128" b="128" a="255"/>
+				</State>
+			</CloseButton>
+			<Button default="Norm">
+				<State string="Norm">
+					<Color string="String" r="255" g="255" b="255" a="255"/>
+					<Texture string="ButtonLeft" path="button/button_l.png" r="255" g="255" b="255" a="255"/>
+					<Texture string="ButtonRight" path="button/button_r.png" r="255" g="255" b="255" a="255"/>
+					<Texture string="ButtonMiddle" path="button/button_m.png" r="255" g="255" b="255" a="255"/>
+					<Int string="Height" value="24"/>
+					<Int string="SizeEdge" value="11"/>
+				</State>
+				<State string="MouseOver">
+					<Color string="String" r="255" g="128" b="0" a="255"/>
+					<Texture string="ButtonLeft" path="button/button_l.png" r="230" g="230" b="230" a="255"/>
+					<Texture string="ButtonRight" path="button/button_r.png" r="230" g="230" b="230" a="255"/>
+					<Texture string="ButtonMiddle" path="button/button_m.png" r="230" g="230" b="230" a="255"/>
+				</State>
+				<State string="Pressed">
+					<Color string="String" r="255" g="128" b="0" a="255"/>
+					<Texture string="ButtonLeft" path="button/button_l.png" r="200" g="200" b="200" a="255"/>
+					<Texture string="ButtonRight" path="button/button_r.png" r="200" g="200" b="200" a="255"/>
+					<Texture string="ButtonMiddle" path="button/button_m.png" r="200" g="200" b="200" a="255"/>
+				</State>
+				<State string="Disabled">
+					<Color string="String" r="128" g="128" b="128" a="128"/>
+					<Texture string="ButtonLeft" path="button/button_l.png" r="128" g="128" b="128" a="255"/>
+					<Texture string="ButtonRight" path="button/button_r.png" r="128" g="128" b="128" a="255"/>
+					<Texture string="ButtonMiddle" path="button/button_m.png" r="128" g="128" b="128" a="255"/>
+				</State>
+			</Button>
+			<EditBox default="Norm">
+				<State string="Norm">
+					<Color string="String" r="255" g="128" b="0" a="255"/>
+					<Color string="Cursor" r="255" g="128" b="0" a="255"/>
+					<Texture string="Left" path="edit/edit_l.png" r="230" g="230" b="230" a="255"/>
+					<Texture string="Right" path="edit/edit_r.png" r="230" g="230" b="230" a="255"/>
+					<Texture string="Middle" path="edit/edit_m.png" r="230" g="230" b="230" a="255"/>
+					<Int string="Height" value="28"/>
+					<Int string="SizeEdge" value="14"/>
+					<Int string="Padding" value="13"/>
+				</State>
+				<State string="Active">
+					<Color string="String" r="255" g="255" b="255" a="255"/>
+					<Color string="Cursor" r="255" g="255" b="255" a="255"/>
+					<Texture string="Left" path="edit/edit_l.png" r="255" g="255" b="255" a="255"/>
+					<Texture string="Right" path="edit/edit_r.png" r="255" g="255" b="255" a="255"/>
+					<Texture string="Middle" path="edit/edit_m.png" r="255" g="255" b="255" a="255"/>
+				</State>
+				<State string="Disabled">
+					<Color string="String" r="128" g="128" b="128" a="255"/>
+					<Color string="Cursor" r="128" g="128" b="128" a="255"/>
+					<Texture string="Left" path="edit/edit_l.png" r="128" g="128" b="128" a="255"/>
+					<Texture string="Right" path="edit/edit_r.png" r="128" g="128" b="128" a="255"/>
+					<Texture string="Middle" path="edit/edit_m.png" r="128" g="128" b="128" a="255"/>
+				</State>
+			</EditBox>
+			<DropDown default="Norm">
+				<State string="Norm">
+					<Color string="Inner" r="64" g="64" b="64" a="200"/>
+					<Color string="Border" r="32" g="32" b="32" a="200"/>
+					<Color string="String" r="255" g="255" b="255" a="255"/>
+
+					<Color string="SelectedInner" r="88" g="88" b="88" a="200"/>
+					<Color string="SelectedString" r="255" g="128" b="0" a="255"/>
+
+					<Texture string="Button" path="drop_button.png" r="230" g="230" b="230" a="255"/>
+					<Texture string="Left" path="edit/edit_l.png" r="230" g="230" b="230" a="255"/>
+					<Texture string="Middle" path="edit/edit_m.png" r="230" g="230" b="230" a="255"/>
+					<Int string="Height" value="28"/>
+					<Int string="SizeEdge" value="14"/>
+					<Int string="SizeButton" value="28"/>
+					<Int string="Padding" value="12"/>
+				</State>
+				<State string="MouseOver">
+					<Texture string="Button" path="drop_button.png" r="255" g="255" b="255" a="255"/>
+				</State>
+				<State string="Pressed">
+					<Texture string="Button" path="drop_button.png" r="210" g="210" b="210" a="255"/>
+				</State>
+			</DropDown>
+			<ScrollBar default="Norm">
+				<State string="Norm">
+					<Int string="bHeight" value="11"/>
+					<Int string="sHeight" value="55"/>
+					<Int string="bWidth" value="13"/>
+					<Color string="BG" r="39" g="39" b="39" a="255"/>
+					<Texture string="Scroll" path="scroll.png" r="255" g="255" b="255" a="255"/>
+					<Texture string="ArrowUp" path="sc_arrow_u.png" r="255" g="255" b="255" a="255"/>
+					<Texture string="ArrowDown" path="sc_arrow_d.png" r="255" g="255" b="255" a="255"/>
+				</State>
+				<State string="MouseOver">
+					<Texture string="Scroll" path="scroll.png" r="255" g="255" b="0" a="255"/>
+					<Texture string="ArrowUp" path="sc_arrow_u.png" r="255" g="255" b="0" a="255"/>
+					<Texture string="ArrowDown" path="sc_arrow_d.png" r="255" g="255" b="0" a="255"/>
+				</State>
+				<State string="Pressed">
+					<Texture string="Scroll" path="scroll.png" r="255" g="128" b="0" a="255"/>
+					<Texture string="ArrowUp" path="sc_arrow_u.png" r="255" g="128" b="0" a="255"/>
+					<Texture string="ArrowDown" path="sc_arrow_d.png" r="255" g="128" b="0" a="255"/>
+				</State>
+			</ScrollBar>
+			<CheckBox default="Norm">
+				<State string="Norm">
+					<Int string="Width" value="19"/>
+					<Int string="Height" value="19"/>
+					<Color string="String" r="255" g="255" b="255" a="255"/>
+					<Texture string="CheckBox" path="checkbox.png" r="255" g="255" b="255" a="255"/>
+					<Texture string="CheckBoxChecked" path="checkbox_c.png" r="255" g="255" b="255" a="255"/>
+				</State>
+				<State string="MouseOver">
+					<Color string="String" r="255" g="255" b="0" a="255"/>
+					<Texture string="CheckBox" path="checkbox.png" r="255" g="128" b="0" a="255"/>
+					<Texture string="CheckBoxChecked" path="checkbox_c.png" r="255" g="128" b="0" a="255"/>
+				</State>
+			</CheckBox>
+			<Text default="Norm">
+				<State string="Norm">
+					<Color string="String" r="255" g="255" b="255" a="255"/>
+				</State>
+				<State string="MouseOver">
+					<Color string="String" r="255" g="255" b="255" a="255"/>
+				</State>
+			</Text>
+			<TextBox default="Norm">
+				<State string="Norm">
+					<Color string="String" r="255" g="255" b="255" a="255"/>
+					<Color string="Inner" r="32" g="32" b="32" a="255"/>
+					<Color string="Border" r="64" g="64" b="64" a="255"/>
+				</State>
+				<State string="MouseOver">
+					<Color string="String" r="255" g="255" b="255" a="255"/>
+					<Color string="Inner" r="16" g="16" b="16" a="255"/>
+					<Color string="Border" r="32" g="32" b="32" a="255"/>
+				</State>
+			</TextBox>
+			<ListBox default="Norm">
+				<State string="Norm">
+					<Color string="String" r="255" g="255" b="255" a="255"/>
+					<Color string="Inner" r="32" g="32" b="32" a="255"/>
+					<Color string="Border" r="0" g="0" b="0" a="255"/>
+					
+					<Color string="SelectString" r="0" g="0" b="0" a="255"/>
+					<Color string="SelectInner" r="255" g="255" b="255" a="255"/>
+
+					<Color string="MouseOverString" r="255" g="128" b="0" a="255"/>
+				</State>
+			</ListBox>
+			<ListView default="Norm">
+				<State string="Norm">
+					<Color string="String" r="255" g="255" b="255" a="255"/>
+					<Color string="Inner" r="32" g="32" b="32" a="0"/>
+					<Color string="Border" r="0" g="0" b="0" a="255"/>
+					
+					<Color string="SelectString" r="0" g="0" b="0" a="255"/>
+					<Color string="SelectInner" r="255" g="255" b="255" a="255"/>
+
+					<Color string="MouseOverString" r="255" g="128" b="0" a="255"/>
+					<Color string="Title" r="164" g="164" b="164" a="255"/>
+					<Color string="TitleDel" r="255" g="255" b="255" a="64"/>
+					<Color string="InnerDel" r="255" g="255" b="255" a="64"/>
+					<Color string="TitleString" r="255" g="255" b="255" a="255"/>
+				</State>
+			</ListView>
+			<ButtonTab default="Norm">
+				<State string="Norm">
+					<Color string="String" r="255" g="255" b="255" a="255"/>
+					<Texture string="ButtonLeft" path="in_active_l.png" r="255" g="255" b="255" a="0"/>
+					<Texture string="ButtonRight" path="in_active_r.png" r="255" g="255" b="255" a="0"/>
+					<Texture string="ButtonMiddle" path="in_active_m.png" r="255" g="255" b="255" a="0"/>
+					<Int string="Height" value="29"/>
+					<Int string="SizeEdge" value="49"/>
+				</State>
+				<State string="MouseOver">
+					<Color string="String" r="255" g="255" b="255" a="255"/>
+					<Texture string="ButtonLeft" path="in_active_l.png" r="255" g="255" b="255" a="255"/>
+					<Texture string="ButtonRight" path="in_active_r.png" r="255" g="255" b="255" a="255"/>
+					<Texture string="ButtonMiddle" path="in_active_m.png" r="255" g="255" b="255" a="255"/>
+				</State>
+				<State string="Pressed">
+					<Color string="String" r="0" g="0" b="0" a="255"/>
+					<Texture string="ButtonLeft" path="in_active_l.png" r="200" g="200" b="200" a="255"/>
+					<Texture string="ButtonRight" path="in_active_r.png" r="200" g="200" b="200" a="255"/>
+					<Texture string="ButtonMiddle" path="in_active_m.png" r="200" g="200" b="200" a="255"/>
+				</State>
+				<State string="Disabled">
+					<Color string="String" r="0" g="0" b="0" a="255"/>
+					<Texture string="ButtonLeft" path="in_active_l.png" r="255" g="255" b="255" a="255"/>
+					<Texture string="ButtonRight" path="in_active_r.png" r="255" g="255" b="255" a="255"/>
+					<Texture string="ButtonMiddle" path="in_active_m.png" r="255" g="255" b="255" a="255"/>
+				</State>
+			</ButtonTab>
+			<WindowBig default="Norm">
+				<State string="Norm">
+					<Color string="Body" r="26" g="26" b="26" a="245"/>
+
+					<Texture string="BorderCL" path="border/border_c_l.png" r="255" g="255" b="255" a="255"/>
+					<Texture string="BorderCR" path="border/border_c_r.png" r="255" g="255" b="255" a="255"/>
+					<Texture string="BorderUL" path="border/border_u_l.png" r="255" g="255" b="255" a="255"/>
+					<Texture string="BorderDL" path="border/border_d_l.png" r="255" g="255" b="255" a="255"/>
+					<Texture string="BorderUR" path="border/border_u_r.png" r="255" g="255" b="255" a="255"/>
+					<Texture string="BorderDR" path="border/border_d_r.png" r="255" g="255" b="255" a="255"/>
+					<Texture string="BorderUC" path="border/border_u_c.png" r="255" g="255" b="255" a="255"/>
+					<Texture string="BorderRC" path="border/border_d_c.png" r="255" g="255" b="255" a="255"/>
+					
+					<Int string="BorderHeight" value="16"/>
+					<Int string="BorderWidth" value="16"/>
+					<Int string="BorderMargin" value="4"/>
+				</State>
+			</WindowBig>
+			<TitleBarBig default="Norm">
+				<State string="Norm">
+					<Color string="Title" r="0" g="0" b="0" a="255"/>
+					<Texture string="Titlebar" path="Title.png" r="255" g="255" b="255" a="255"/>
+					<Int string="Height" value="32"/>
+				</State>
+				<State string="Minimized">
+					<Texture string="Titlebar" path="Title.png" r="255" g="255" b="255" a="255"/>
+				</State>
+				<State string="Dragging">
+					<Texture string="Titlebar" path="Title.png" r="255" g="255" b="255" a="255"/>
+				</State>
+			</TitleBarBig>
+			<CloseButtonBig default="Norm">
+				<State string="Norm">
+					<Texture string="Button" path="close.png" r="255" g="255" b="255" a="255"/>
+					<Int string="RightMargin" value="50"/>
+					<Int string="TopMargin" value="0"/>
+					<Int string="Width" value="48"/>
+					<Int string="Height" value="24"/>
+				</State>
+				<State string="MouseOver">
+					<Texture string="Button" path="close.png" r="255" g="200" b="200" a="255"/>
+				</State>
+				<State string="Disabled">
+					<Texture string="Button" path="close.png" r="128" g="128" b="128" a="255"/>
+				</State>
+			</CloseButtonBig>
+		</FMPGUI>
+	</ColorThemes>
+</GUI>

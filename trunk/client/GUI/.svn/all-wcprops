@@ -1,0 +1,293 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/!svn/ver/219/trunk/client/GUI
+END
+CButton.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/210/trunk/client/GUI/CButton.cpp
+END
+CListView.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/210/trunk/client/GUI/CListView.h
+END
+CWindow.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/210/trunk/client/GUI/CWindow.h
+END
+CColor.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/210/trunk/client/GUI/CColor.cpp
+END
+CD3DRender.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/210/trunk/client/GUI/CD3DRender.h
+END
+CTimer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/124/trunk/client/GUI/CTimer.cpp
+END
+CText.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/210/trunk/client/GUI/CText.cpp
+END
+CListBox.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/210/trunk/client/GUI/CListBox.cpp
+END
+CGUI.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/218/trunk/client/GUI/CGUI.cpp
+END
+CFigure.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/187/trunk/client/GUI/CFigure.h
+END
+CScrollBar.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/210/trunk/client/GUI/CScrollBar.h
+END
+CVar.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/210/trunk/client/GUI/CVar.cpp
+END
+CMouse.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/210/trunk/client/GUI/CMouse.cpp
+END
+CCheckBox.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/210/trunk/client/GUI/CCheckBox.h
+END
+CDropDown.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/210/trunk/client/GUI/CDropDown.cpp
+END
+CTextBox.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/210/trunk/client/GUI/CTextBox.cpp
+END
+CElement.h
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/210/trunk/client/GUI/CElement.h
+END
+CEditBox.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/219/trunk/client/GUI/CEditBox.cpp
+END
+CTexture.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/210/trunk/client/GUI/CTexture.cpp
+END
+CPos.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/124/trunk/client/GUI/CPos.cpp
+END
+CKeyboard.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/210/trunk/client/GUI/CKeyboard.h
+END
+CListView.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/210/trunk/client/GUI/CListView.cpp
+END
+CWindow.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/210/trunk/client/GUI/CWindow.cpp
+END
+CD3DRender.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/210/trunk/client/GUI/CD3DRender.cpp
+END
+CFont.h
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/210/trunk/client/GUI/CFont.h
+END
+CButton.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/210/trunk/client/GUI/CButton.h
+END
+CFigure.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/187/trunk/client/GUI/CFigure.cpp
+END
+CColor.h
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/210/trunk/client/GUI/CColor.h
+END
+CScrollBar.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/215/trunk/client/GUI/CScrollBar.cpp
+END
+CTimer.h
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/210/trunk/client/GUI/CTimer.h
+END
+unistr.h
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/217/trunk/client/GUI/unistr.h
+END
+CCheckBox.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/210/trunk/client/GUI/CCheckBox.cpp
+END
+CText.h
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/210/trunk/client/GUI/CText.h
+END
+CGUI.h
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/210/trunk/client/GUI/CGUI.h
+END
+CListBox.h
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/210/trunk/client/GUI/CListBox.h
+END
+CElement.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/210/trunk/client/GUI/CElement.cpp
+END
+GUI.sln
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/124/trunk/client/GUI/GUI.sln
+END
+CMouse.h
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/187/trunk/client/GUI/CMouse.h
+END
+CVar.h
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/210/trunk/client/GUI/CVar.h
+END
+CKeyboard.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/210/trunk/client/GUI/CKeyboard.cpp
+END
+CDropDown.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/210/trunk/client/GUI/CDropDown.h
+END
+GUI.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/214/trunk/client/GUI/GUI.vcproj
+END
+CTextBox.h
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/210/trunk/client/GUI/CTextBox.h
+END
+CEditBox.h
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/210/trunk/client/GUI/CEditBox.h
+END
+D3D9.h
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/124/trunk/client/GUI/D3D9.h
+END
+CTexture.h
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/210/trunk/client/GUI/CTexture.h
+END
+CPos.h
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/124/trunk/client/GUI/CPos.h
+END
+CFont.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/210/trunk/client/GUI/CFont.cpp
+END
